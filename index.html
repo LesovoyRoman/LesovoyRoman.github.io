@@ -1,0 +1,888 @@
+﻿<!doctype html>
+<html lang="ru" class=""><head>
+    <title>Создайте свой именной свитшот, футболку или толстовку</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Именная футболка, Именной свитшот, Именная толстовка, заказать, со скидкой, доставка, с фамилией, с именем и номером, мужские свитшоты, мужские футболки, мужские толстовки, женские свитшоты, женские футболки, женские толстовки, толстовка на молнии, с цифрой, одежда в подарок, интерент магазин именной одежды, свитшот с надписью, футболка с надписью, толстовка с надписью, с твоим текстом">
+    <meta name="description" content="Интернет магазин мужских и женских футболок свитшотов и толстовок с именем, фамилией, номером или любым другим текстом">
+    <meta name="viewport" content="maximum-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <link rel="stylesheet" href="assets/css/const.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/jqcart.css">
+    <link rel="stylesheet" href="assets/css/sweet-alert.css">
+    <script type="text/javascript" async="" id="topmailru-code" src="http://top-fwz1.mail.ru/js/code.js"></script>
+    <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="assets/js/const.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/jqcart.js"></script>
+    <script src="assets/js/sweet-alert.js"></script>
+    <script>
+        $(function(){
+            'use strict';
+            /*$.jqCart({
+                buttons: '.add_item',
+                handler: 'assets/php/handler.php',
+                cartLabel: '.label-place',
+                visibleLabel: true,
+                openByAdding: false,
+                currency: '₽'
+            });*/
+            $('#open').click(function(){
+
+                $.jqCart('openCart');
+            });
+
+            $('#clear').click(function(){
+                $.jqCart('clearCart');
+            });
+
+            $('.add_item').click(function(){
+                swal({
+                        title: "Товар добавлен в корзину",
+                        text: "Оформить заказ или продолжить покупки?",
+                        type: "success",
+                        showCancelButton: true,
+                        confirmButtonColor: '#68A754',
+                        confirmButtonText: 'Оформить заказ'
+
+                    },
+                    function(){
+                        $.jqCart('openCart');
+                    });
+                var er = $('.add_item').data('id');
+                $('.add_item').data('id',parseInt(er)+1);
+                if (er == 0) {
+                    document.getElementById("adds1").style.display="none";
+                    document.getElementById("adds2").style.display="inline-block";
+                }
+                if (er == 1) {
+                    document.getElementById("adds2").style.display="none";
+                    document.getElementById("adds3").style.display="inline-block";
+                }
+                if (er == 2) {
+                    document.getElementById("adds3").style.display="none";
+                    document.getElementById("adds4").style.display="inline-block";
+                }
+                if (er == 3) {
+                    document.getElementById("adds4").style.display="none";
+                    document.getElementById("adds5").style.display="inline-block";
+                }
+                if (er == 4) {
+                    document.getElementById("adds5").style.display="none";
+                    document.getElementById("adds6").style.display="inline-block";
+                }
+                if (er == 5) {
+                    document.getElementById("adds6").style.display="none";
+                    document.getElementById("adds7").style.display="inline-block";
+                }
+                if (er == 6) {
+                    document.getElementById("adds7").style.display="none";
+                    document.getElementById("adds8").style.display="inline-block";
+                }
+                if (er == 6) {
+                    document.getElementById("adds8").style.display="none";
+                    document.getElementById("adds9").style.display="inline-block";
+                }
+                if (er == 6) {
+                    document.getElementById("adds9").style.display="none";
+                    document.getElementById("adds10").style.display="inline-block";
+                }
+                yaCounter43651284.reachGoal('add'); return true;
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        #wrapper {
+            width: 50%;
+            margin: 10px;
+        }
+        #label-place {
+            margin: 10px 0;
+        }
+        .item_box {
+            border: 1px solid #999;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .item_box::after {
+            content:'';
+            display: table;
+            clear: left;
+        }
+        .item_box > img {
+            float: left;
+        }
+        .shopping_list {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        .shopping_list td, .shopping_list th {
+            padding: 10px;
+            border: 1px solid #AAAAAA;
+        }
+    </style></head>
+
+<body>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97342138-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43651284 = new Ya.Metrika({ id:43651284, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/43651284" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript> <!-- /Yandex.Metrika counter -->
+<!-- vk.com targeting pixel --> <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-132604-43Qdb';</script>
+<!--—- Rating@Mail.ru counter —--->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "2910629", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript>&lt;div&gt;
+    &lt;img src="//top-fwz1.mail.ru/counter?id=2910629;js=na" style="border:0;position:absolute;left:-9999px;" alt="" /&gt;
+    &lt;/div&gt;</noscript>
+<!--—- //Rating@Mail.ru counter —-->
+<div class="popup_overlay"></div>
+<div class="popup">
+    <div class="popup_title">
+        Таблицы размеров (Погрешности размеров +/- 1 см)<span class="closer"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" enable-background="new 0 0 18 18"><path fill="#D84E42" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"></path></svg></span>
+    </div>
+    <div class="popup_content">
+
+        <div class="block-img">
+            <img src="assets/images/const/size1.jpg">
+        </div>
+        <div class="block-text-1">
+            <p>Свитшоты детские</p>
+            <table>
+                <tbody><tr>
+                    <th style="	min-width:100px;text-align:left;">Размер</th>
+                    <th>7XS</th>
+                    <th>6XS</th>
+                    <th>5XS</th>
+                    <th>4XS</th>
+                    <th>3XS</th>
+
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Ширина плеч (А)</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Длина рукава (B)</td>
+                    <td>32</td>
+                    <td>36</td>
+                    <td>40</td>
+                    <td>45</td>
+                    <td>49</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Общая длина (С)</td>
+                    <td>38</td>
+                    <td>42</td>
+                    <td>47</td>
+                    <td>49</td>
+                    <td>51</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Обхват груди (D)</td>
+                    <td>33</td>
+                    <td>34</td>
+                    <td>36</td>
+                    <td>38</td>
+                    <td>39</td>
+                </tr>
+                </tbody></table>
+            <p>Свитшоты Взрослые</p>
+            <table>
+                <tbody><tr>
+                    <th style="	min-width:100px;text-align:left;">Размер</th>
+                    <th>XS - 44</th>
+                    <th>S - 46</th>
+                    <th>M - 48</th>
+                    <th>L - 50</th>
+                    <th>XL - 52</th>
+                    <th>XXL - 54</th>
+                    <th>XXXL - 56</th>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Ширина плеч (А)</td>
+                    <td>39</td>
+                    <td>40</td>
+                    <td>44</td>
+                    <td>47</td>
+                    <td>50</td>
+                    <td>52</td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Длина рукава (B)</td>
+                    <td>54</td>
+                    <td>58</td>
+                    <td>63</td>
+                    <td>65</td>
+                    <td>67</td>
+                    <td>70</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Общая длина (С)</td>
+                    <td>62</td>
+                    <td>64</td>
+                    <td>67</td>
+                    <td>69</td>
+                    <td>71</td>
+                    <td>74</td>
+                    <td>76</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Обхват груди (D)</td>
+                    <td>46</td>
+                    <td>49</td>
+                    <td>51</td>
+                    <td>53</td>
+                    <td>55</td>
+                    <td>57</td>
+                    <td>60</td>
+                </tr>
+                </tbody></table>
+
+        </div>
+        <div class="block-img-2">
+            <img src="assets/images/const/size2.jpg">
+        </div>
+        <div class="block-text-2">
+            <p>Размеры Футболок</p>
+            <table>
+                <tbody><tr>
+                    <th style="	min-width:100px;text-align:left;">Размер EU<br>Размер RU</th>
+                    <th>XS<br>42-44</th>
+                    <th>S<br>44-46</th>
+                    <th>M<br>46-48</th>
+                    <th>L<br>48-50</th>
+                    <th>XL<br>50-52</th>
+                    <th>XXL<br>52-54</th>
+                    <th>XXXL<br>54-56</th>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Длинна *</td>
+                    <td>67-68</td>
+                    <td>69-70</td>
+                    <td>71-72</td>
+                    <td>72-73</td>
+                    <td>74-75</td>
+                    <td>77-78</td>
+                    <td>79-80</td>
+                </tr>
+                <tr>
+                    <td style="	min-width:100px;text-align:left;">Ширина *</td>
+                    <td>45-46</td>
+                    <td>47-48</td>
+                    <td>50-51</td>
+                    <td>54-55</td>
+                    <td>56-57</td>
+                    <td>59-60</td>
+                    <td>61-62</td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+</div>
+<div class="bg-1">
+    <header>
+        <div class="bg-header">
+            <div class="logo">
+                <img src="assets\images\logo.png" alt="Так и так">
+            </div>
+            <div class="menu">
+                <div class="block">
+                    <div class="left">
+                        <p>Именная одежда</p>
+                    </div>
+                    <div class="right">
+                        <p>Свитшоты и толстовки с вашем именем на заказ</p>
+                    </div>
+                    <hr>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#1" onclick="return anchorScroller(this)">Конструктор</a></li>
+                        <li><a href="#2" onclick="return anchorScroller(this)">Галерея</a></li>
+                        <li><a href="#3" onclick="return anchorScroller(this)">Доставка и оплата</a></li>
+                        <li><a href="#4" onclick="return anchorScroller(this)">Отзывы</a></li>
+                        <li><a href="#5" onclick="return anchorScroller(this)">Наши услуги</a></li>
+                        <li><a href="#6" onclick="return anchorScroller(this)">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <div class="social">
+                    <a href="https://vk.com/takitakstore" target="_blank" class="open_vk_group"><img src="assets\images\icon-vk.png" alt="Вконтакте"></a>
+                    <a href="https://www.instagram.com/takitak_store/ " target="_blank" class="open_insta_page"><img src="assets\images\icon-in.png" alt="Инстраграмм"></a>
+                    <img src="assets\images\icon-fb.png" alt="FaceBook">
+                    <img src="assets\images\icon-ok.png" alt="Однаклассники">
+                </div>
+                <div class="label-place cart"><img src="cart.png"><p>Товаров <span class="jqcart-total-cnt">0</span><br>Оформить</p>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="content-1">
+        <div class="block">
+            <h1>Создавайте свою<br>уникальную одежду<br>с любым именем и цифрой</h1>
+        </div>
+    </section>
+</div>
+<a name="1"></a>
+<section class="content-2">
+    <h2>Назови вещи своими именами</h2>
+    <div class="left">
+        <div class="group">
+            <label class="label">Мужской
+                <input type="radio" onclick="ChangeMan()" name="pol" checked="">
+                <span></span>
+            </label>
+            <label class="label">Женский
+                <input type="radio" onclick="ChangeWoman()" name="pol">
+                <span></span>
+            </label>
+        </div>
+
+        <div id="view1" class="image-back" style="display: block;">
+            <img id="image1" src="assets/images/const/dress/coft_white_1.png">
+            <div>
+                <p>
+                    <span id="tb1" class="tc-7">NAME</span><br>
+                    <span id="TextBackSmall" class="tc-7">text<br></span>
+                    <span id="tb2" class="tc-7">00</span>
+                </p>
+            </div>
+            <p class="price"><strong id="PriceFront">1990</strong><small> руб</small></p>
+        </div>
+        <div id="view2" class="image-front" style="display: none;">
+            <img id="image2" src="assets/images/const/dress/coft_white_2.png">
+            <div>
+                <p><span id="TextFront" class="tc-7"></span></p>
+            </div>
+            <p class="price"><strong id="PriceBack">1990</strong><small> руб</small></p>
+        </div>
+        <div class="group">
+            <label class="label">Вид с зади
+                <input type="radio" onclick="ChangeView1()" name="view" checked="">
+                <span></span>
+            </label>
+            <label class="label">Вид с переди
+                <input type="radio" onclick="ChangeView2()" name="view">
+                <span></span>
+            </label>
+        </div>
+    </div>
+    <div class="right">
+        <p>Выберите тип одежды:</p>
+        <div class="group">
+            <label class="label">Футболка
+                <input type="radio" name="title" onclick="ChangeTitle1()" id="type-1" data-price="990" data-mbb="assets/images/const/dress/shirt_black_1.png" data-mfb="assets/images/const/dress/shirt_black_2.png" data-wbb="assets/images/const/dress/shirt_black_1.png" data-wfb="assets/images/const/dress/shirt_black_2.png" data-mbw="assets/images/const/dress/shirt_white_1.png" data-mfw="assets/images/const/dress/shirt_white_2.png" data-wbw="assets/images/const/dress/shirt_white_1.png" data-wfw="assets/images/const/dress/shirt_white_2.png" data-mba="assets/images/const/dress/shirt_asphalt_1.png" data-mfa="assets/images/const/dress/shirt_asphalt_2.png" data-wba="assets/images/const/dress/shirt_asphalt_1.png" data-wfa="assets/images/const/dress/shirt_asphalt_2.png" value="990" checked="">
+                <span></span>
+            </label>
+            <label class="label">Свитшот
+                <input type="radio" name="title" onclick="ChangeTitle2()" id="type-2" data-price="1990" value="1990">
+                <span></span>
+            </label>
+            <label class="label">Толстовка
+                <input type="radio" name="title" onclick="ChangeTitle3()" id="type-3" data-price="2190" value="2190">
+                <span></span>
+            </label>
+            <label class="label" style="color:#ccc;">Бомбер
+                <input type="radio" name="title" onclick="ChangeTitle4()" id="type-4" data-price="1990" disabled="disabled">
+                <span></span>
+            </label>
+        </div>
+        <div class="block">
+            <p>Выберите цвет одежды:</p>
+            <div class="group long" id="color1" style="display: none;">
+                <label class="label-color" style="background:#000000" checked="">
+                    <input type="radio" onclick="ChangeImageBlack()" name="color" value="Черный">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#fff">
+                    <input type="radio" onclick="ChangeImageWhite()" name="color" value="Белый">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#ccc">
+                    <input type="radio" onclick="ChangeImageAsphalt()" name="color" value="Серый">
+                    <span></span>
+                </label>
+            </div>
+            <div class="group long" id="color2" style="display: inline-block;">
+                <label class="label-color" style="background:#000000" checked="">
+                    <input type="radio" onclick="ChangeImageBla2()" name="color" value="Черный">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#fff">
+                    <input type="radio" onclick="ChangeImageWhi2()" name="color" value="Белый">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#ccc">
+                    <input type="radio" onclick="ChangeImageAsp2()" name="color" value="Серый">
+                    <span></span>
+                </label>
+            </div>
+            <div class="group long" id="color3" style="display:none">
+                <label class="label-color" style="background:#000000" checked="">
+                    <input type="radio" onclick="ChangeImageBla3()" name="color" value="Черный">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#fff">
+                    <input type="radio" onclick="ChangeImageWhi3()" name="color" value="Белый">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#ccc">
+                    <input type="radio" onclick="ChangeImageAsp3()" name="color" value="Серый">
+                    <span></span>
+                </label>
+            </div>
+            <div class="group long" id="color4" style="display:none">
+                <label class="label-color" style="background:#000000" checked="">
+                    <input type="radio" onclick="ChangeImageBla()" name="color" value="Черный">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#fff">
+                    <input type="radio" onclick="ChangeImageWhi()" name="color" value="Белый">
+                    <span></span>
+                </label>
+                <label class="label-color" style="background:#ccc">
+                    <input type="radio" onclick="ChangeImageAsp()" name="color" value="Серый">
+                    <span></span>
+                </label>
+            </div>
+            <p>Введите текст надписи</p>
+            <input type="text" class="input-left" id="name" onkeyup="ChangeTextBack()" placeholder="Текст надписи">
+            <label>
+                <input type="checkbox" class="input-checkbox" id="TextSmall" onclick="ChangeTextSmall()"><span>Добавить вторую строку<span>
+		    </span></span></label>
+
+            <input type="text" class="input-left" id="name2" onkeyup="ChangeTextBackSmall()" placeholder="Введите текст второй строки">
+            <p>Введите номер:</p>
+            <input type="text" oninput="this.value = this.value.replace(/\D/g, '')" class="input-left" style="margin-top:10px;" name="man" id="number" onkeyup="numer()" maxlength="4" placeholder="00">
+        </div>
+        <div class="block">
+            <p>Выберите размер одежды:</p>
+            <div class="group long">
+                <label class="label-size">XS
+                    <input type="radio" onclick="ChangeXS()" name="size" checked="">
+                    <span></span>
+                </label>
+                <label class="label-size">S
+                    <input type="radio" onclick="ChangeS()" name="size">
+                    <span></span>
+                </label>
+                <label class="label-size">M
+                    <input type="radio" onclick="ChangeM()" name="size">
+                    <span></span>
+                </label>
+                <label class="label-size">L
+                    <input type="radio" onclick="ChangeL()" name="size">
+                    <span></span>
+                </label>
+                <label class="label-size">XL
+                    <input type="radio" onclick="ChangeXL()" name="size">
+                    <span></span>
+                </label>
+                <label class="label-size">XXL
+                    <input type="radio" onclick="ChangeXXL()" name="size">
+                    <span></span>
+                </label>
+                <div><p style="text-align:right;margin-right:4px"><small><a href="#1" id="popap">Таблица размеров</a></small></p></div>
+            </div>
+
+
+            <p><small>Если не нужно, просто оставьте пустую</small></p>
+            <input type="text" class="input-right" style="margin-top:10px;margin-bottom:20px;" id="NameTextFront" name="TextFront" onkeyup="ChangeTextFront()" placeholder="Текс на лицевую сторону">
+
+
+
+            <p>Выберите цвет надписи:</p>
+            <div class="group">
+                <label class="label-font" style="background:url('assets/images/const/tc-1.png')">
+                    <input type="radio" onclick="ct1()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:url('assets/images/const/tc-2.png')">
+                    <input type="radio" onclick="ct2()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:url('assets/images/const/tc-3.png')">
+                    <input type="radio" onclick="ct3()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:url('assets/images/const/tc-4.png')">
+                    <input type="radio" onclick="ct4()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:url('assets/images/const/tc-5.png')">
+                    <input type="radio" onclick="ct5()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:url('assets/images/const/tc-6.png')">
+                    <input type="radio" onclick="ct6()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:black">
+                    <input type="radio" onclick="ct7()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:#fff">
+                    <input type="radio" onclick="ct8()" name="ColorFont" value="man" checked="">
+                    <span></span>
+                </label>
+                <label class="label-font" style="background:#C60D12">
+                    <input type="radio" onclick="ct9()" name="ColorFont" value="man">
+                    <span></span>
+                </label>
+            </div>
+        </div>
+        <div class="block-line">
+            <p>Выберите шрифт для надписи:</p>
+            <div class="group" style="margin-top:25px;">
+                <label class="label-family superstar">
+                    <input type="radio" onclick="tf1()" name="font" value="Superstar" checked="">
+                    SUPERSTAR
+                    <span></span>
+                </label>
+                <label class="label-family allstar">
+                    <input type="radio" onclick="tf2()" name="font" value="Allstar">
+                    ALLSTAR
+                    <span></span>
+                </label>
+                <label class="label-family btn">
+                    <input type="radio" onclick="tf3()" name="font" value="Bignoodletitling" checked="">
+                    BIGNOODLETITLING
+                    <span></span>
+                </label>
+                <label class="label-family jersey">
+                    <input type="radio" onclick="tf4()" name="font" value="Jersey M54">
+                    JERSEY M54
+                    <span></span>
+                </label>
+                <label class="label-family engr">
+                    <input type="radio" onclick="tf5()" name="font" value="Engravers">
+                    ENGRAVERS
+                    <span></span>
+                </label>
+                <label class="label-family eng">
+                    <input type="radio" onclick="tf6()" name="font" value="Old english">
+                    OLD ENGLISH
+                    <span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="block-line">
+            <input type="submit" id="adds1" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds2" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds3" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds4" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds5" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds6" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds7" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds8" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds9" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+
+            <input type="submit" id="adds10" style="display:none;" class="input-button add_item" data-id="0" data-title="Футболка" data-pol="Мужская" data-price="990" data-img="assets/images/const/dress/shirt_black_1.png" data-size="XS" data-color="Черный" data-textback="-" data-number="00" data-text1="-" data-text2="-" data-textcolor="Голограмма золото" data-font="SUPERSTAR" value="Добавить в корзину">
+            <input type="submit" class="input-button" id="open" value="Оформить заказ">
+        </div>
+
+    </div>
+</section>
+<a name="2"></a>
+<div class="bg-2">
+    <section class="content-3">
+        <h2>Счастливые обладатели именных свитшотов</h2>
+        <br><br>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/1.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/1.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/2.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/2.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/3.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/3.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/4.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/4.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/5.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/5.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/6.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/6.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/7.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/7.jpg" alt="">
+        </div>
+        <div class="block">
+            <a data-fancybox="gallery" href="assets/images/work/8.jpg">
+                <div class="prewive">
+                    <p class="ring"><svg style="margin-top:8px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 7.449-11.985 7.449c-7.18 0-12.015-7.449-12.015-7.449s4.446-6.551 12.015-6.551c7.694 0 11.985 6.551 11.985 6.551zm-7 .449c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5 0 2.762 2.239 5 5 5 2.762 0 5-2.238 5-5z"></path></svg></p>
+                    <p><b>Юлия</b><br><i>holograpih</i></p>
+                </div>
+            </a>
+            <img src="assets/images/work/8.jpg" alt="">
+        </div>
+    </section>
+</div>
+<a name="3"></a>
+<div class="bg-3">
+    <section class="content-4">
+        <h2>Доставка</h2>
+        <div class="left">
+            <table>
+                <tbody><tr>
+                    <th>Доставка по Москве</th>
+                    <th>Стоимость</th>
+                    <th>Время</th>
+                </tr>
+                <tr>
+                    <td>Курьером</td>
+                    <td>350 р</td>
+                    <td>1 день</td>
+                </tr>
+                <tr>
+                    <td>Самовывоз</td>
+                    <td>Бесплатно</td>
+                    <td>1 день</td>
+                </tr>
+                <tr>
+                    <th>Доставка по Московской области</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Транспортная компания СДЭК</td>
+                    <td>350 р</td>
+                    <td>1-2 дня</td>
+                </tr>
+                <tr>
+                    <th>Доставка по России и СНГ</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Почтой России</td>
+                    <td>350 р</td>
+                    <td>3-5 дней</td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div class="right">
+            <p>Мы осуществляем подарочную упаковку вашего заказа</p>
+        </div>
+    </section>
+</div>
+<a name="4"></a>
+<section class="content-5">
+    <h2>Условия оплаты</h2>
+    <div class="left">
+        <img src="assets/images/oplata.png">
+    </div>
+    <div class="right">
+        <p>Все вещи мы делаем в единственном экземпляре – специально для вас! Поэтому после согласования вам необходимо внести предоплату.
+
+            Вы можете оплатить вашу покупку банковской картой или наличными в пункте самовывоза.</p>
+    </div>
+</section>
+<section class="content-6">
+    <h2>Что говорят наши клиенты?</h2>
+    <figure>
+        <div class="prewive">
+            <!--<p><b>«Шикарное качество и цена...»</b></p>-->
+            <p>Заказывал свитшот) качеством доволен) очень быстро напечатали и доставили, утром заказал вечером уже получил накладную, на следующий день он уже был у меня) спасибо большое)</p>
+        </div>
+        <p><img src="assets/images/photo/1.jpg" alt=""></p>
+        <figcaption>Анастасия</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <!--<p><b>«Шикарное качество и цена...»</b></p>-->
+            <p>Очень крутые футболки! Ношу их все время. Купила себе и парню!</p>
+        </div>
+        <p><img src="assets/images/photo/2.jpg" alt=""></p>
+        <figcaption>Ирина</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <p><!-- <b>«Шикарное качество и цена...»</b> --></p>
+            <p>Заказывал свитшот для подруги. Боялся, что не подойдет по размеру. Доставили быстро, и по размеру точно подошел. Подруга очень довольна!</p>
+        </div>
+        <p><img src="assets/images/photo/3.jpg" alt=""></p>
+        <figcaption>Вадим</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <p><!-- <b>«Шикарное качество и цена...»</b> --></p>
+            <p>Сомневался на счет предоплаты. Как оказалось – очень даже зря. Качество отличное!</p>
+        </div>
+        <p><img src="assets/images/photo/4.jpg" alt=""></p>
+        <figcaption>Маргарита и руслан</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <p><!-- <b>«Шикарное качество и цена...»</b> --></p>
+            <p>Заказали свитшотов на всю семью. Выглядим в них потрясно! Еще и скидку получили! Всем советую)</p>
+        </div>
+        <p><img src="assets/images/photo/5.jpg" alt=""></p>
+        <figcaption>Бони и Клайд</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <p><!-- <b>«Шикарное качество и цена...»</b> --></p>
+            <p>Круто, что можно сделать надпись на груди. Хотела большой принт на груди. Все сделали прямо так, как я и хотела. Отдельное спасибо менеджеру Марии за креативный подход.</p>
+        </div>
+        <p><img src="assets/images/photo/6.jpg" alt=""></p>
+        <figcaption>Виктория</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <p><!-- <b>«Шикарное качество и цена...»</b> --></p>
+            <p>Заказал парные свитшоты по своему дизайну. Сделали все точно по макету! Еще и скидку на парные свитшоты получил!</p>
+        </div>
+        <p><img src="assets/images/photo/7.jpg" alt=""></p>
+        <figcaption>Алексей</figcaption>
+    </figure>
+    <figure>
+        <div class="prewive">
+            <!--<p><b>«Шикарное качество и цена...»</b></p>-->
+            <p>Долго думала, что подарить другу, пока не наткнулась на этот сайт. Подарок очень оригинальный. Футболка очень мягкая. Не сдержалась, купила и себе футболку.</p>
+        </div>
+        <p><img src="assets/images/photo/8.jpg" alt=""></p>
+        <figcaption>Антон</figcaption>
+    </figure>
+</section>
+<a name="5"></a>
+<div class="bg-4">
+    <section class="content-7">
+        <h2>Наши услуги</h2>
+        <p style="text-align:center"><b>Наши самые популярные товары – это именные свитшоты и футболки, сделанные на заказ.</b></p>
+        <p>Что может еще сильнее выделить человека из толпы, чем яркая и оригинальная именная одежда? Сегодня одежда с именем, фамилией, номером или любым другим вашим текстом - это отличный способ привлечь внимание окружающих.</p>
+        <p>Именные свитшоты, футболки и толстовки – это отличный подарок, который обязательно станет любимой вещью в гардеробе. Все изделия сделаны на заказ, поэтому вы не встретите на улице человека с таким же свитшотом или футболкой.</p>
+        <p>Покажи свою индивидуальность, создав свой собственный неповторимый образ. Твоя футболка – твои правила!</p>
+        <p>Наши принты не стираются и не выцветают со временем!</p>
+        <p>Мы делаем печать на свитшотах и футболках по макетам заказчика!</p>
+        <h2>Хочу скидку!</h2>
+        <p>Хотите заказать именной свитшот, футболку или толстовку и получить скидку?</p>
+        <p>Тогда вы обратились по адресу!</p>
+        <p>Закажи любую вещь и получи 5% возврат за фото с ссылкой на наш сайт в ВКонтакте или Instagram.</p>
+        <p>Закажи пару свитшотов для него и для неё со скидкой! Две футболки или свитшота со скидкой 10%.</p>
+        <p>Так же мы делаем скидку 15% при заказе от 3х изделий!</p>
+
+    </section>
+</div>
+<a name="6"></a>
+<div class="bg-maps">
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace47ba3b8652527e93d6161b347d5021804584817a2b73ce458c38a8db528ef8&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script> -->
+    <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e4ff27e69c096a6e21963aa959712833b981a8833d1786fae886c179ac71a85&amp;width=100%25&amp;height=676&amp;lang=ru_RU&amp;scroll=true"></script>
+    <section>
+        <h2>Контакты</h2>
+        <p>Москва, МКАД 14км ТЦ «Садавод», 1 этаж, Линия Б, павильон 28<br>
+            Метро «Братиславская»<br>
+            Метро «Люблино»</p><br>
+        <p><span>+7 (980) 735-90-00</span></p><br>
+        <p><span>honey.wear@yandex.ru</span></p><br>
+        <p>Ежедневно с 7.00-16.00</p>
+    </section>
+</div>
+<div class="bg-footer">
+    <section class="content-9">
+        <div class="logo">
+            <img src="assets/images/logo.png">
+        </div>
+        <div class="menu">
+            <a href="#" onclick="return anchorScroller(this)"><p><img src="assets/images/scroll.png"></p></a>
+            <p>ВВЕРХ</p>
+        </div>
+        <div class="right">
+            <a href="https://vk.com/takitakstore " target="_blank"><img src="assets\images\icon-vk.png" alt="Вконтакте"></a>
+            <a href="https://www.instagram.com/takitak_store/ " target="_blank"><img src="assets\images\icon-in.png" alt="Инстраграмм"></a>
+            <img src="assets\images\icon-fb.png" alt="FaceBook">
+            <img src="assets\images\icon-ok.png" alt="Однаклассники"><br>
+        </div>
+    </section>
+</div>
+
+<div><div class="sweet-overlay" tabindex="-1"></div><div class="sweet-alert" tabindex="-1"><div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info"></div> <div class="icon success"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom"></div> <h2>Title</h2><p>Text</p><button class="cancel" tabindex="2">Cancel</button><button class="confirm" tabindex="1">OK</button></div></div></body></html>

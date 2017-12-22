@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'bnt';
+    src: url('../font/bnt.ttf');
+}
+@font-face {
+    font-family: 'superstar';
+    src: url('../font/superstar.ttf');
+}
+@font-face {
+    font-family: 'allstars';
+    src: url('../font/allstars.ttf');
+}
+@font-face {
+    font-family: 'jersey';
+    src: url('../font/jersey.ttf');
+}
+@font-face {
+    font-family: 'engr';
+    src: url('../font/engr.ttf');
+}
+@font-face {
+    font-family: 'eng';
+    src: url('../font/eng.ttf');
+}
+.eng{
+    font-family: 'eng';
+    font-size:20px;
+}
+.superstar{
+    font-family: 'superstar';
+    font-size:20px;
+}
+.allstar{
+    font-family: 'allstars';
+    font-size:20px;
+}
+.btn{
+    font-family: 'bnt';
+    font-size:20px;
+}
+.jersey{
+    font-family: 'jersey';
+    font-size:20px;
+}
+.engr{
+    font-family: 'engr';
+    font-size:20px;
+}
